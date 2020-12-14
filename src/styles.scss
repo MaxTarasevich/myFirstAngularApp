@@ -1,0 +1,14 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+   align-items: center;
+   background-color:rgba($color: #031321, $alpha: 0.8);
+}
