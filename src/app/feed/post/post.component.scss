@@ -1,9 +1,20 @@
 .card{
     margin-top: 2rem;
-  
+    li{
+        svg { cursor: pointer;
+   }
 }
 .post-title{
     list-style: none;
     display: flex;
     padding: 1rem .5rem;
+    align-items: center;
+    padding-left: 2rem;
+}
+.card-title{
+    list-style: none;
+    
+    }
+   
+   
 }
