@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-post',
@@ -7,12 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostComponent implements OnInit {
 
+  @Input() title:any
+  @Input() imgUrl:any
+  @Input() comments: any
+
   constructor() { }
 
   ngOnInit(): void {
-    fetch('https://jsonplaceholder.typicode.com/users/1/posts')
-    .then((response) => response.json())
-    .then((json) => console.log(json));
-  }
-
+  
+}
 }

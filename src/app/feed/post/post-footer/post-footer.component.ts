@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-post-footer',
@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostFooterComponent implements OnInit {
 
+showComment = true
+showModal = false
+
+ @Input() commentFooter:any
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  hideComment(){
+this,this.showComment = !this.showComment
+  }
+
+toggleModal(){
+  this.showModal = !this.showModal
+}
 
 }

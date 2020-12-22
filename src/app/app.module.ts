@@ -11,6 +11,8 @@ import { PostComponent } from './feed/post/post.component';
 import { PostHeaderComponent } from './feed/post/post-header/post-header.component';
 import { PostBodyComponent } from './feed/post/post-body/post-body.component';
 import { PostFooterComponent } from './feed/post/post-footer/post-footer.component';
+import { ModalComponent } from './feed/post/post-footer/modal/modal.component';
+
 
 
 
@@ -24,6 +26,8 @@ import { PostFooterComponent } from './feed/post/post-footer/post-footer.compone
     PostHeaderComponent,
     PostBodyComponent,
     PostFooterComponent,
+    ModalComponent,
+   
    
   
   ],
