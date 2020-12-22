@@ -8,6 +8,9 @@ import { StoriesComponent } from './stories/stories.component';
 import { FeedComponent } from './feed/feed.component';
 import { ActionComponent } from './action/action.component';
 import { PostComponent } from './feed/post/post.component';
+import { PostHeaderComponent } from './feed/post/post-header/post-header.component';
+import { PostBodyComponent } from './feed/post/post-body/post-body.component';
+import { PostFooterComponent } from './feed/post/post-footer/post-footer.component';
 
 
 
@@ -18,6 +21,9 @@ import { PostComponent } from './feed/post/post.component';
     FeedComponent,
     ActionComponent,
     PostComponent,
+    PostHeaderComponent,
+    PostBodyComponent,
+    PostFooterComponent,
    
   
   ],
