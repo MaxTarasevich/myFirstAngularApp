@@ -15,26 +15,31 @@ export class FeedComponent implements OnInit {
       comments:[{
         id:1,
         autor:'autor 1',
-        text:'Text example 1'
+        sex:'man',
+        text:'Text example 1 cookie'
       },
       {
         id:2,
         autor:'autor 2',
+        sex:'woman',
         text:'Text example 2'
       },
       {
         id:3,
         autor:'autor 3',
+        sex:'woman',
         text:'Text example 3'
       },
       {
         id:4,
         autor:'autor 4',
+        sex:'man',
         text:'Text example 4'
       },
       {
         id:5,
         autor:'autor 5',
+        sex:'man',
         text:'Text example 5'
       },
     ]
@@ -46,26 +51,31 @@ export class FeedComponent implements OnInit {
       comments:[{
         id:1,
         autor:'autor 1',
+        sex:'man',
         text:'Text example 1'
       },
       {
         id:2,
         autor:'autor 2',
+        sex:'woman',
         text:'Text example 2'
       },
       {
         id:3,
         autor:'autor 3',
+        sex:'woman',
         text:'Text example 3'
       },
       {
         id:4,
         autor:'autor 4',
+        sex:'man',
         text:'Text example 4'
       },
       {
         id:5,
         autor:'autor 5',
+        sex:'man',
         text:'Text example 5'
       },
     ]
@@ -77,32 +87,40 @@ export class FeedComponent implements OnInit {
       comments:[{
         id:1,
         autor:'autor 1',
+        sex:'man',
         text:'Text example 1'
       },
       {
         id:2,
         autor:'autor 2',
+        sex:'woman',
         text:'Text example 2'
       },
       {
         id:3,
         autor:'autor 3',
+        sex:'woman',
         text:'Text example 3'
       },
       {
         id:4,
         autor:'autor 4',
+        sex:'man',
         text:'Text example 4'
       },
       {
         id:5,
         autor:'autor 5',
+        sex:'man',
         text:'Text example 5'
       },
     ]
     },
   ]
 
+
+
+  
   constructor() { }
 
   ngOnInit(): void {

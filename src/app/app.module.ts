@@ -12,6 +12,9 @@ import { PostHeaderComponent } from './feed/post/post-header/post-header.compone
 import { PostBodyComponent } from './feed/post/post-body/post-body.component';
 import { PostFooterComponent } from './feed/post/post-footer/post-footer.component';
 import { ModalComponent } from './feed/post/post-footer/modal/modal.component';
+import { MyPipePipe } from './my-pipe.pipe';
+import { NewMyPipePipe } from './new-my-pipe.pipe';
+import { MydirectivDirective } from './mydirectiv.directive';
 
 
 
@@ -27,6 +30,9 @@ import { ModalComponent } from './feed/post/post-footer/modal/modal.component';
     PostBodyComponent,
     PostFooterComponent,
     ModalComponent,
+    MyPipePipe,
+    NewMyPipePipe,
+    MydirectivDirective,
    
    
   

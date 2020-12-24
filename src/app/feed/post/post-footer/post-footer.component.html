@@ -3,21 +3,21 @@
   <div *ngIf="showComment; else falseBlock">
   
     <p class="card-text" *ngFor="let comment of commentFooter">
-      <strong>{{comment.autor}}</strong> <br>
-     {{comment.text}}</p>
+      <strong appMydirectiv>{{comment.sex | myPipe}} {{comment.autor}}</strong> <br>
+     {{comment.text | newMyPipe}}</p>
   </div>
 
   <ng-template #falseBlock> Сomments were hidden</ng-template>
 
 
-    <div class="text-muted row justify-content-between">
+    <div class="text-muted row justify-content-between" >
       <button class="col-3" (click)="toggleModal()">Добавьте комментарий...</button> 
       
      
       <button class="col-3 text-success" (click)="hideComment()">
         
         <span *ngIf="showComment; else commentShow">Скрыть комментарий</span>
-        <ng-template #commentShow> Показать комментарии</ng-template>
+        <ng-template #commentShow > Показать комментарии</ng-template>
       
       </button>
 
