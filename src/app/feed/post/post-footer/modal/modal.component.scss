@@ -1,6 +1,12 @@
+
+@keyframes modal {
+    from {top:-100vh;}
+    to {top:0;}
+  }
+
 .Mymodal{
     position: fixed;
-    top: 0;
+    top:0;
     left: 0;
     min-width: 100vw;
     min-height: 100vh;
@@ -9,4 +15,13 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: auto;
+    z-index: 1;
+    animation-name: modal;
+  animation-duration: 1s;
+  input, textarea{
+    margin-bottom: 10px;
+    padding: .5em;
+  }
 }
+

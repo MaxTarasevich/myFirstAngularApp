@@ -1,5 +1,5 @@
 <div class="card-footer">
- <app-modal *ngIf="showModal" [modalFunc]="toggleModal()"></app-modal>
+ <app-modal *ngIf="showModal" (modalClose)="toggleModal()" (comment)="comment($event)"></app-modal>
   <div *ngIf="showComment; else falseBlock">
   
     <p class="card-text" *ngFor="let comment of commentFooter">

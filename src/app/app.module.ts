@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,7 @@ import { ModalComponent } from './feed/post/post-footer/modal/modal.component';
 import { MyPipePipe } from './my-pipe.pipe';
 import { NewMyPipePipe } from './new-my-pipe.pipe';
 import { MydirectivDirective } from './mydirectiv.directive';
+import { from } from 'rxjs';
 
 
 
@@ -40,7 +42,8 @@ import { MydirectivDirective } from './mydirectiv.directive';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

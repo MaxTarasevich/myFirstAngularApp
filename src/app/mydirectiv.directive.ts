@@ -7,7 +7,6 @@ export class MydirectivDirective {
 
 @HostListener('click')
   public onClick(event :any):void{
-    console.log(this.el.nativeElement.localName)
     if(this.el.nativeElement.localName === 'img'){
       this.el.nativeElement.style.border = '2px solid red';
     }else this.el.nativeElement.style.color = 'red';

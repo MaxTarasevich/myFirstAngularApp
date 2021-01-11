@@ -1,5 +1,7 @@
 <div class="Mymodal">
-    <input type="text" name="autor" id="autor" placeholder="enter your name">
-    <textarea name="message" id="message" cols="30" rows="10" placeholder="your message"></textarea>
-    <button (click)="modalFunc">Send</button>
+    <input [(ngModel)]="autor" type="text" name="autor" id="autor" placeholder="enter your name">
+
+    <textarea [(ngModel)]="text" name="message" id="message" cols="30" rows="10" placeholder="your message"></textarea>
+
+    <button (click)="modalFunc()">Send</button>
 </div>
