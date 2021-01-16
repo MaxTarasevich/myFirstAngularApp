@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import {ImageGetService} from '../../../image-get.service'
 
 @Component({
   selector: 'app-post-header',
@@ -9,9 +10,17 @@ export class PostHeaderComponent implements OnInit {
 
   @Input() titleHeader: any;
   @Input() urlHeader: any;
-  constructor() { }
+
+  
+ respons!:any
+  
+  constructor(private images:ImageGetService) { }
 
   ngOnInit(): void {
+ this.images.getImage().subscribe((respons)=>{this.respons = respons
+  console.log('shdfjdhsfjhsdjfhdjsfhsdjf',this.respons[0].url)
+    })
+  
   }
 
 }
