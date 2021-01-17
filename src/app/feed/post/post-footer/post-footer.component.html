@@ -4,7 +4,7 @@
   <div *ngIf="showComment; else falseBlock">
   
     <p class="card-text" *ngFor="let comment of commentFooter">
-    </p>
+   {{comment.body}} </p>
   </div>
 
   <ng-template #falseBlock> Сomments were hidden</ng-template>

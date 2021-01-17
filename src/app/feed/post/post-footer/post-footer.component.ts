@@ -19,9 +19,9 @@ commentFooter:any
   constructor(private posts:PostsService) { }
 
   ngOnInit(): void {
-  this.posts.getComments().subscribe((resp)=>{
-    this.commentFooter = resp
-    
+  this.posts.getComments().subscribe(()=>{
+    this.commentFooter = this.posts.commentsArr.filter((filt)=>filt.userId == this.index +1)
+    console.log(this.commentFooter)
   })
   console.log(this.index)
   

@@ -7,10 +7,9 @@ import {tap} from 'rxjs/operators';
 
 
 export interface Comments {
-  postId:number,
-  id:number,
-  name:string,
-  email:	string,
+  userId: number,
+  id: number,
+  title:string,
   body:string,
 }
 

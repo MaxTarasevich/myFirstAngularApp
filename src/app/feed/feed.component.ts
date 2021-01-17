@@ -15,7 +15,7 @@ public loading:boolean = true
 
   
   
-  constructor(private images:ImageGetService) { }
+  constructor(public images:ImageGetService) { }
 
   ngOnInit(): void {
     this.images.getImage().subscribe(()=>{
