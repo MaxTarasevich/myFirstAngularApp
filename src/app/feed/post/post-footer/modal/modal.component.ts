@@ -8,12 +8,15 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class ModalComponent implements OnInit {
 
+@Input() index:any
+@Input() id:any
 @Output() modalClose = new EventEmitter()
 @Output() comment = new EventEmitter<object>()
 
 autor!:string
 text!:string
 newComment!:object
+
   constructor() { }
 
   ngOnInit(): void {
@@ -26,10 +29,10 @@ newComment!:object
 
   modalFunc(){
     this.newComment = {
-      id:6,
-      sex:'man',
-      autor:this.autor,
-      text:this.text,
+      userId: this.index,
+      id: this.id,
+      title:this.autor,
+      body:this.text,
     }
 
     this.modalClose.emit();

@@ -8,20 +8,20 @@ import {PostsService} from '../../../posts.service'
 })
 export class PostFooterComponent implements OnInit {
 
-showComment = true
+
+
+  @Input() index:any
+
+showComment = false
 showModal = false
-
-@Input() index:any
- 
-
 commentFooter:any
+id:number = 1000
  
   constructor(private posts:PostsService) { }
 
   ngOnInit(): void {
   this.posts.getComments().subscribe(()=>{
     this.commentFooter = this.posts.commentsArr.filter((filt)=>filt.userId == this.index +1)
-    console.log(this.commentFooter)
   })
   console.log(this.index)
   

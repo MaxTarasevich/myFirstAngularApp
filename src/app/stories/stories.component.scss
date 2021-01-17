@@ -10,3 +10,69 @@
     padding: 0;
     cursor: pointer;
 }
+ /* The switch - the box around the slider */
+ .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {display:none;}
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    background-color: #2196F3;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #ccc;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  } 
+  div.darkMode{
+
+    background-image: linear-gradient(to bottom, rgb(22, 20, 161), rgb(37, 33, 163), rgb(52, 47, 165), rgb(68, 60, 166), rgb(83, 74, 168), rgb(98, 87, 170), rgb(113, 101, 172), rgb(128, 114, 174), rgb(143, 128, 176), rgb(159, 141, 177), rgb(174, 155, 179), rgb(189, 168, 181));
+  }
+  .logoSvg.darkMode{
+      fill: seashell;
+  }

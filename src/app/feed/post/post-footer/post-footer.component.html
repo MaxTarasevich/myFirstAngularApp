@@ -1,10 +1,13 @@
 <div class="card-footer">
   
- <app-modal *ngIf="showModal" (modalClose)="toggleModal()" (comment)="comment($event)"></app-modal>
+ <app-modal *ngIf="showModal" (modalClose)="toggleModal()" (comment)="comment($event)" [index]="index+1" [id]="id"></app-modal>
   <div *ngIf="showComment; else falseBlock">
   
-    <p class="card-text" *ngFor="let comment of commentFooter">
-   {{comment.body}} </p>
+    <div class="card-text" *ngFor="let comment of commentFooter">
+      <h3 appMydirectiv> {{comment.title}}</h3>
+      <p> {{comment.body}}</p>
+   </div>
+
   </div>
 
   <ng-template #falseBlock> Сomments were hidden</ng-template>
