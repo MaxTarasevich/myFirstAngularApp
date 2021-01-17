@@ -9,8 +9,9 @@ export class PostComponent implements OnInit {
 
   @Input() title:any
   @Input() imgUrl:any
-  @Input() comments: any
-  @Input() likes: any
+  @Input() id:any
+  @Input() index:any
+ 
 
   constructor() { }
 

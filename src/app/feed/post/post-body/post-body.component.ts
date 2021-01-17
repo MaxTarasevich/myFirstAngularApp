@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {ImageGetService} from '../../../image-get.service'
+
 
 @Component({
   selector: 'app-post-body',
@@ -7,17 +7,11 @@ import {ImageGetService} from '../../../image-get.service'
   styleUrls: ['./post-body.component.scss']
 })
 export class PostBodyComponent implements OnInit {
+  @Input()likes:any
 
- respons!:any
-
-  @Input() likes:any
-  
-  constructor(private images:ImageGetService) { }
+  constructor() { }
 
   ngOnInit(): void {
- this.images.getImage().subscribe((respons)=>{this.respons = respons
-  console.log('shdfjdhsfjhsdjfhdjsfhsdjf',this.respons[0].url)
-    })
   
   }
 

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import {PostsService} from '../../../posts.service'
 
 @Component({
   selector: 'app-post-footer',
@@ -10,12 +11,21 @@ export class PostFooterComponent implements OnInit {
 showComment = true
 showModal = false
 
- @Input() commentFooter:any
+@Input() index:any
  
-  constructor() { }
+
+commentFooter:any
+ 
+  constructor(private posts:PostsService) { }
 
   ngOnInit(): void {
-    console.log(this.commentFooter)
+  this.posts.getComments().subscribe((resp)=>{
+    this.commentFooter = resp
+    
+  })
+  console.log(this.index)
+  
+  
   }
 
   hideComment(){

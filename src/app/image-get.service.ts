@@ -2,7 +2,11 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
-/*
+import {tap} from 'rxjs/operators';
+
+
+
+
 export interface Images {
   id: string,
 author: string,
@@ -11,18 +15,21 @@ height: number,
 url: string,
 download_url: string,
 }
-*/
+
 @Injectable({
   providedIn: 'root'
 })
 export class ImageGetService {
 
-imagesArr!:any
+public imagesArr:Images[] = []
 
   constructor(private http: HttpClient) { }
 
-getImage(){
-  return this.http.get('https://picsum.photos/v2/list')
+getImage():Observable<Images[]>{
+  return this.http.get<Images[]>('https://picsum.photos/v2/list')
+  .pipe(tap((imagesArr)=>{
+    this.imagesArr = imagesArr
+  }))
 }
 
 }

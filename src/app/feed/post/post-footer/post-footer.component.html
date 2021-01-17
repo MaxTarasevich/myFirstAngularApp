@@ -1,10 +1,10 @@
 <div class="card-footer">
+  
  <app-modal *ngIf="showModal" (modalClose)="toggleModal()" (comment)="comment($event)"></app-modal>
   <div *ngIf="showComment; else falseBlock">
   
     <p class="card-text" *ngFor="let comment of commentFooter">
-      <strong appMydirectiv>{{comment.sex | myPipe}} {{comment.autor}}</strong> <br>
-     {{comment.text | newMyPipe}}</p>
+    </p>
   </div>
 
   <ng-template #falseBlock> Сomments were hidden</ng-template>
