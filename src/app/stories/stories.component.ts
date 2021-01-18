@@ -18,9 +18,9 @@ export class StoriesComponent implements OnInit {
     this.darkMode = !this.darkMode
     console.log(this.darkMode)
     if(this.darkMode){
-      document.querySelector("body")?.classList.add('darkMode')
+      document.querySelector(".container")?.classList.add('darkMode')
     } else{
-      document.querySelector("body")?.classList.remove('darkMode')
+      document.querySelector(".container")?.classList.remove('darkMode')
     }
     
   }
