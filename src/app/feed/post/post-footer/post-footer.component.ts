@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {PostsService} from '../../../posts.service'
+import {PostsService} from '../../../posts.service';
+import {ToLocalStorageService} from '../../../to-local-storage.service'
 
 @Component({
   selector: 'app-post-footer',
@@ -16,15 +17,22 @@ showComment = false
 showModal = false
 commentFooter:any
 id:number = 1000
+str:string = "11"
  
-  constructor(private posts:PostsService) { }
+  constructor(private posts:PostsService,
+    private localStore:ToLocalStorageService) { }
 
   ngOnInit(): void {
-  this.posts.getComments().subscribe(()=>{
-    this.commentFooter = this.posts.commentsArr.filter((filt)=>filt.userId == this.index +1)
-  })
-  console.log(this.index)
-  
+    if(this.localStore.getFromLocalStorage((this.index+1).toString())){
+  this.str = this.localStore.getFromLocalStorage((this.index+1).toString())
+  this.commentFooter = JSON.parse(this.str)
+    }else{
+      this.posts.getComments().subscribe(()=>{
+        this.commentFooter = this.posts.commentsArr.filter((filt)=>filt.userId == this.index +1)
+        this.localStore.setToLocalStorage((this.index+1).toString(),JSON.stringify(this.commentFooter))
+      })
+    }
+
   
   }
 
@@ -33,8 +41,9 @@ this.showComment = !this.showComment
   }
 
   comment(object:object){
-    console.log('From parrent',object)
+  
     this.commentFooter.push(object)
+    this.localStore.setToLocalStorage((this.index+1).toString(),JSON.stringify(this.commentFooter))
   }
 
 

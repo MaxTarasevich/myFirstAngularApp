@@ -20,7 +20,6 @@ public loading:boolean = true
   ngOnInit(): void {
     this.images.getImage().subscribe(()=>{
       this.loading = false
-      this.images.imagesArr.length = 10
     })
    
   }
