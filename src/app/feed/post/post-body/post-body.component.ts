@@ -18,7 +18,6 @@ export class PostBodyComponent implements OnInit {
   ngOnInit(): void {
     if(this.LocalStore.getFromLocalStorage(`likes${this.index}`)){
         this.likesFromStore = this.LocalStore.getFromLocalStorage(`likes${this.index}`)
-        console.log(this.likesFromStore,'+++++++++++++++++++++++++++')
         if(parseInt( this.likesFromStore)>this.likes){
           document.querySelector('.likes')!.classList.add('liked')
         }

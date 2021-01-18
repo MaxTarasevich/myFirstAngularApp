@@ -1,5 +1,5 @@
 <div class="container" *ngIf="!loading">
-    <app-post  *ngFor = "let post of images.imagesArr;index as i"  [title]="post.author" [imgUrl]="post.download_url" [id]="post.id" [index]="i" ></app-post>
+    <app-post  *ngFor = "let post of imagesArr;index as i"  [title]="post.author" [imgUrl]="post.download_url" [id]="post.id" [index]="i" ></app-post>
 </div>
 
 <div *ngIf="loading">

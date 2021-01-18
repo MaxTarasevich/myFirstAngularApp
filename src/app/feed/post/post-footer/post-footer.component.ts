@@ -17,7 +17,7 @@ showComment = false
 showModal = false
 commentFooter:any
 id:number = 1000
-str:string = "11"
+str:any
  
   constructor(private posts:PostsService,
     private localStore:ToLocalStorageService) { }

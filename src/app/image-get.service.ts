@@ -28,7 +28,7 @@ public imagesArr:Images[] = []
 getImage():Observable<Images[]>{
   return this.http.get<Images[]>('https://picsum.photos/v2/list')
   .pipe(tap((imagesArr)=>{
-    for(let i = 0; i<=10; i++){
+    for(let i = 0; i<10; i++){
       this.imagesArr.push(imagesArr[Math.ceil(Math.random()*29)])
     }
    
