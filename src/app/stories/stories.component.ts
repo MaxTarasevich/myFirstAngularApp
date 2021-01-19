@@ -16,11 +16,12 @@ export class StoriesComponent implements OnInit {
   }
   darkModeToggle(){
     this.darkMode = !this.darkMode
-    console.log(this.darkMode)
     if(this.darkMode){
       document.querySelector(".container")?.classList.add('darkMode')
+      document.querySelector('footer')!.classList.add('darkMode')
     } else{
       document.querySelector(".container")?.classList.remove('darkMode')
+      document.querySelector('footer')!.classList.remove('darkMode')
     }
     
   }
