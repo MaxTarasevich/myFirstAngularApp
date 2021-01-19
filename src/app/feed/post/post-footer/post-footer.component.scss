@@ -1,3 +1,9 @@
 span{
     cursor: pointer;
 }
+.btn{
+    overflow: hidden;
+}
+.btn:hover{
+    overflow:visible;
+}
