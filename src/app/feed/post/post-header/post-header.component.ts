@@ -10,6 +10,7 @@ export class PostHeaderComponent implements OnInit {
 
   @Input() titleHeader: any;
   @Input() urlHeader: any;
+  @Input()index:any
 
   constructor() { }
 

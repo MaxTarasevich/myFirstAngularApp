@@ -1,19 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 
+
+
+import { ActivatedRoute} from '@angular/router';
+
 @Component({
   selector: 'app-stories',
   templateUrl: './stories.component.html',
   styleUrls: ['./stories.component.scss']
 })
 export class StoriesComponent implements OnInit {
- 
+  loginName!:any
   darkMode :boolean = false
   htmlCol:any
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-  
+     this.loginName = this.route.snapshot.url
+  console.log(this.loginName)
   }
   darkModeToggle(){
     this.darkMode = !this.darkMode

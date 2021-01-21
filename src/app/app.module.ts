@@ -18,6 +18,8 @@ import { MyPipePipe } from './my-pipe.pipe';
 import { NewMyPipePipe } from './new-my-pipe.pipe';
 import { MydirectivDirective } from './mydirectiv.directive';
 import { from } from 'rxjs';
+import { RegestryFormComponent } from './regestry-form/regestry-form.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 
@@ -36,6 +38,8 @@ import { from } from 'rxjs';
     MyPipePipe,
     NewMyPipePipe,
     MydirectivDirective,
+    RegestryFormComponent,
+    NotFoundComponent,
    
    
   
