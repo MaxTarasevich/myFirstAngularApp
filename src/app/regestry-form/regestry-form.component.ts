@@ -36,10 +36,5 @@ export class RegestryFormComponent implements OnInit {
    this.LocStor.setToLocalStorage(`login`,this.myForm.value.loginName)
     
   }
-  submit(){
-    this.loginName = this.myForm.value.loginName
-    
-   console.log(this.myForm)
-  }
 
 }
