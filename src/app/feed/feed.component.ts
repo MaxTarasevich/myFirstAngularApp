@@ -4,6 +4,7 @@ import {ToLocalStorageService} from '../to-local-storage.service';
 
 
 import { ActivatedRoute} from '@angular/router';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-feed',
@@ -18,6 +19,7 @@ public loading:boolean = true
 imagesArr!:any
 str:any
 routerUrl:any
+loginName:any
 
   
   
@@ -27,7 +29,7 @@ routerUrl:any
   ngOnInit(): void {
     
     this.routerUrl = this.route.snapshot.params['id']
-  
+    this.loginName = this.LocStore.getFromLocalStorage('login')
 
     if(this.LocStore.getFromLocalStorage(`images`)){
       this.str = this.LocStore.getFromLocalStorage(`images`)
