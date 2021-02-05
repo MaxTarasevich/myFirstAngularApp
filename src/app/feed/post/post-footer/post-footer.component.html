@@ -1,0 +1,31 @@
+<div class="card-footer">
+  
+ <app-modal *ngIf="showModal" (modalClose)="toggleModal()" (comment)="comment($event)" [index]="index+1" [id]="id"></app-modal>
+  <div *ngIf="showComment; else falseBlock">
+  
+    <div class="card-text" *ngFor="let comment of commentFooter">
+      <h3 appMydirectiv> {{comment.title}}</h3>
+      <p> {{comment.body}}</p>
+   </div>
+
+  </div>
+
+  <ng-template #falseBlock> Сomments were hidden</ng-template>
+
+
+    <div class="text-muted row justify-content-between" >
+      <button class="col-6 col-sm-4  btn btn-outline-primary  " (click)="toggleModal()">Добавьте комментарий</button> 
+      
+     
+      <button class="col-6 col-sm-4  btn btn-outline-primary " (click)="hideComment()">
+        
+        <span *ngIf="showComment; else commentShow">Скрыть комментарий</span>
+        <ng-template #commentShow > Показать комментарии</ng-template>
+      
+      </button>
+
+
+    </div>
+
+  
+  </div>

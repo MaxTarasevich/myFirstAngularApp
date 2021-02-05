@@ -1,0 +1,18 @@
+
+
+<div *ngIf=" loginName" class="row col-sm-6 mx-auto justify-content-center"> Добро пожаловать {{loginName}}
+ 
+</div>
+<div *ngIf="loginName" class="row col-12 mx-auto justify-content-center">
+  <button  [routerLink]="['/login',loginName]" class="btn btn-outline-primary">На главную</button>
+</div>
+
+
+
+<div class="container" *ngIf="!loading">
+    <app-post   *ngFor = "let post of imagesArr;index as i"  [title]="post.author" [imgUrl]="post.download_url" [id]="post.id" [index]="i"  ></app-post>
+</div>
+
+<div *ngIf="loading">
+  
+    Loading.....</div>

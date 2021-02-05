@@ -1,0 +1,9 @@
+.container{
+    
+    padding-bottom: 2.5rem;
+}
+.container.darkMode{
+    background-image: linear-gradient(to top right, rgb(11, 15, 71), rgb(26, 37, 85), rgb(42, 59, 99), rgb(57, 82, 112), rgb(73, 104, 126), rgb(88, 126, 140), rgb(81, 118, 149), rgb(73, 109, 157), rgb(66, 101, 166), rgb(59, 93, 174), rgb(51, 84, 183), rgb(44, 76, 191));
+    //background-image: linear-gradient(to top right, rgb(22, 20, 161), rgb(37, 33, 163), rgb(52, 47, 165), rgb(68, 60, 166), rgb(83, 74, 168), rgb(98, 87, 170), rgb(113, 101, 172), rgb(128, 114, 174), rgb(143, 128, 176), rgb(159, 141, 177), rgb(174, 155, 179), rgb(189, 168, 181));
+   //background-image: linear-gradient(to bottom, rgb(93, 14, 173), rgb(92, 20, 165), rgb(91, 26, 156), rgb(91, 31, 148), rgb(90, 37, 140), rgb(89, 43, 132), rgb(88, 49, 123), rgb(87, 55, 115), rgb(86, 61, 107), rgb(86, 66, 99), rgb(85, 72, 90), rgb(84, 78, 82));
+}
