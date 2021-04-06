@@ -1,27 +1,49 @@
-# ProgectOne
+<h1>Приветствую!</h1>
+<p>Это мой первый проект на Angular!</p>
+<p>Цель - ознакомиться с основными возможностями этого замечательного фреймворка!</p>
+<p>Оригинальный репозиторий со всей историей моих поисков можно найти по ссылке:</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
+<p>
+  <a href="https://bitbucket.org/MaxTarasevich/hometask/src/master/" target="_blank" rel="noopener noreferrer">https://bitbucket.org/MaxTarasevich/hometask/src/master/</a>
+ </p>
 
-## Development server
+<p>Что я изучил: </p>
+<p>1.Реактивные формы. </p>
+<p>2.Pipes, в том числе как созавать собственные. </p>
+<p>3.Дерективы, создание пользовательских деректив. </p>
+<p>4.Сервисы!На мой взгляд самый интерестный инструмент. </p>
+<p>5.Http запросы, познакомился с библиотекой RxJS. </p>
+<p>6.TypeScript! </p>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+<p>Что было реализовано в моем небольшом проекте:</p>
 
-## Code scaffolding
+<p>1.Регистрация на главной странице, данные о новом пользователе хранятся в LocalStorage.</p>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<p>2.Реализован переключатель со светлой на темную тему с помощь дерективы  [ngClass].</p>
 
-## Build
+<p>3.С помощью пользовательской дерективы MydirectivDirective реализован следующий функционал:</p>
+<p>-при клике на картинку она открывается на весь экран;</p>
+<p>-при клике на значек лайка он окрашивается в красный цвет;</p>
+<p>-при клике на заголовок комментария - окрашивает его в красный.</p>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+<p>4.Реализованы следующие сервисы:</p>
 
-## Running unit tests
+<p>- ToLocalStorageService - сохраняет и извлекает данные из LocalStorage.</p>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<p>- PostsService делает запрос на ресурс </p>
+<p>https://jsonplaceholder.typicode.com/posts , </p>
+<p>сохраняет данные в массив,компонент app-post-footer использует данные для отображения комментариев</p>
+<p>в карточках,при первом обращении на сервер данные сохраняются в LocalStorage,при перезагрузке страницы комментарии берутся из </p>
+<p>хранилища, так же при добавлении нового комментария он сохраняется в LocalStorage.</p>
 
-## Running end-to-end tests
+<p>- ImageGetService - делает запрос на </p>
+<p>https://picsum.photos/v2/list ,</p>
+<p>с помощью метода tap из полученного массива извлекается 10 рандомных </p>
+<p>элементов, которые добавляюся в массив imagesArr, который в свою очередь </p>
+<p>используется компонентом app-feed для отображения картинок, авторов,количества лайков. </p>
+<p>Данные при первой загрузке так же добавляются в локальное хранилище, без очистки хранилища при перезагрузке картинки меняться не будут.</p>
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+5.Верстка - использовал Bootstrap, SCSS.</p>
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
