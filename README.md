@@ -2,7 +2,7 @@
 <p>Это мой первый проект на Angular!</p>
 
 <p>
-  <a href="https://maxtarasevich.github.io/myFirstAngularApp/" target="_blank" >Мой проект на Angular!</a>
+  <a href="https://maxtarasevich.github.io/myFirstAngularApp/" target="_blank" >Мой проект на Angular!  https://maxtarasevich.github.io/myFirstAngularApp/</a>
  </p>
 
 
