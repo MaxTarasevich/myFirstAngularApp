@@ -2,7 +2,7 @@
 <p>Это мой первый проект на Angular!</p>
 
 <p>
-  <a href="https://maxtarasevich.github.io/myFirstAngularApp/" target="_blank" rel="noopener noreferrer">Мой проект на Angular!</a>
+  <a href="https://maxtarasevich.github.io/myFirstAngularApp/" target="_blank" >Мой проект на Angular!</a>
  </p>
 
 
@@ -10,7 +10,7 @@
 <p>Оригинальный репозиторий со всей историей моих поисков можно найти по ссылке:</p>
 
 <p>
-  <a href="https://bitbucket.org/MaxTarasevich/hometask/src/master/" target="_blank" rel="noopener noreferrer">https://bitbucket.org/MaxTarasevich/hometask/src/master/</a>
+  <a href="https://bitbucket.org/MaxTarasevich/hometask/src/master/" target="_blank" >https://bitbucket.org/MaxTarasevich/hometask/src/master/</a>
  </p>
 
 <p>Что я изучил: </p>
